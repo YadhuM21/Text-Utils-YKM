@@ -1,5 +1,6 @@
 ## Text Utils
 Manipulation of text can be done as of users need
+Text can be converted to UpperCase , LowerCase and there are other functions like clear text , copy text and remove extra spaces
 
 ## Available Scripts
 
