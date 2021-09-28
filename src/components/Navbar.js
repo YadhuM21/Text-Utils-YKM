@@ -28,6 +28,11 @@ export default function Navbar(props) {
         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
         <button className="btn btn-outline-primary" type="submit">Search</button>
       </form> */}
+      <div className="mx-2">
+          <button className="btn btn-danger mx-1" data-toggle="modal" data-target="#loginModal">Login</button>
+          <button className="btn btn-primary mx-1" data-toggle="modal" data-target="#signupModal">SignUp</button>
+      </div>
+      
       <div className={`form-check form-switch text-${props.mode==='light'?'dark':'white'}`}>
           <input
             className="form-check-input"
