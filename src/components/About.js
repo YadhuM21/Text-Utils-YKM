@@ -1,33 +1,6 @@
-// import React, { useState } from "react";
+import React from "react";
 
 export default function About(props) {
-  // const handleDarkMode = () => {
-  //   if (darkObj.color === "black") {
-  //     setdarkObj({
-  //       color: "white",
-  //       backgroundColor: "black",
-  //       border: "0.5px solid blue",
-  //     });
-  //     setbuttonName("Turn Off Dark Mode");
-  //   } else {
-  //     setdarkObj({
-  //       color: "black",
-  //       backgroundColor: "white",
-  //     });
-  //     setbuttonName("Enable Dark Mode");
-  //   }
-  // };
-  // const [darkObj, setdarkObj] = useState({
-  //   color: "black",
-  //   backgroundColor: "white",
-  // });
-
-  // const [buttonName, setbuttonName] = useState("Enable Dark Mode");
-
-  // let darkObj = {
-  //     color: 'white' ,
-  //     backgroundColor: 'black'
-  // }
   return (
     <div className="container" style={props.darkObj}>
       <h1 className="my-3">About Us</h1>
@@ -128,11 +101,6 @@ export default function About(props) {
             </div>
           </div>
         </div>
-      </div>
-      <div className="container my-3">
-        {/* <button onClick={handleDarkMode} className="btn btn-primary my-3">
-          {buttonName}
-        </button> */}
       </div>
     </div>
   );

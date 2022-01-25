@@ -65,8 +65,6 @@ function App() {
           </Route>
 
         </Switch>
-      {/* <About/>  */}
-      {/* <TextForm heading="Enter the Text to Analyze" mode={mode}/> */}
       </div>
       </Router>
     </>

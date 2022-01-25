@@ -16,10 +16,10 @@ export default function TextForm(props) {
     setText(newText);
   };
 
-  // const handlespaces =()=>{
-  //   let newtext = text.trim();
-  //   setText(newtext);
-  //   };
+  const handlespaces =()=>{
+    let newtext = text.split(" ").filter((ele)=>{return ele.length!==0}).join(" ");
+    setText(newtext);
+    };
 
   const handleOnChange = (event) => {
     setText(event.target.value);
@@ -37,7 +37,6 @@ export default function TextForm(props) {
             value={text}
             onChange={handleOnChange}
             style={{color: props.mode==='dark'?'white':'black' , backgroundColor: props.mode==='dark'?'#042743':'white'}}
-            // style={{color: props.mode==='dark'?'white':'black'}}
             id="myBox"
             rows="8"
           ></textarea>
@@ -50,20 +49,17 @@ export default function TextForm(props) {
           >
             Convert to LowerCase
           </button>
+          <button className="btn btn-warning my-3 mx-3" onClick={handlespaces}> Remove Spaces </button>
           <button className="btn btn-danger my-2 mx-2" onClick={handleClear}>
             {" "}
             CLEAR{" "}
           </button>
-          {/* <button onClick={handleDarkMode} className="btn btn-primary my-3">
-            {buttonName}
-          </button> */}
-          {/* <button className="btn btn-warning my-3 mx-3" onClick={handlespaces}> Clear Space </button> */}
         </div>
       </div>
       <div className="container my-3" style={{color: props.mode==='dark'?'white':'black'}}>
         <h1>Text Summary</h1>
         <p>
-          {text.split(" ").filter((ele)=>{return ele.length!==0}).length} words , {text.length} charecters
+          {text.split(" ").filter((ele)=>{return ele.length!==0}).length} words , {text.split(" ").join('').length} charecters
         </p>
         <h2>Preveiw</h2>
         <p>{text}</p>
